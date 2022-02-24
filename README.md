@@ -31,10 +31,18 @@ In case there are 2 jobs, then require 8 task managers in order to run the jobs.
 
 Submit job by 
 ```
+# start cluster
+start-cluster.sh
+# repeat task manager starts until enough task managers are created
+taskmanager.sh start 
+
 flink run flink-job/target/stocksurfer-flink-job-1.0.0-SNAPSHOT-shaded.jar
 # Should show result that such as below, that shows multiple job submitted:
 Job has been submitted with JobID bfd6b30a81051e9607a0b5da63e5c2ca
 Job has been submitted with JobID 84fd014c23244a271e77b8c850dbbd13
+
+# stop cluster
+stop-cluster.sh
 ```
 
 
